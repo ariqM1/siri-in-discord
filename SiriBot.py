@@ -22,14 +22,14 @@ async def join(ctx):  #function makes the bot join the voice channel
    if(ctx.author.voice):
     channel = ctx.author.voice.channel
     await channel.connect()
-    await ctx.send("What's up you dumb whores")
+    await ctx.send("What's up you guys")
    else:
-    await ctx.send("Your dumbass ain't in a voice channel betch!")
+    await ctx.send("You are not in a voice channel")
 
 
 @client.command(pass_context = True)
 async def leave(ctx):  #function makes the bot disconnect from the voice channel
     await ctx.voice_client.disconnect()
-    await ctx.send("I'm out this hoe you dumb shit")
+    await ctx.send("I'm outtta here")
 
 client.run(os.getenv('TOKEN'))  #makes bot go online
